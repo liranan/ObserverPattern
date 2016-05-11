@@ -11,9 +11,9 @@ package cn.edu.uestc.observerpattern;
  */
 public interface Subject {
 
-    public void registerObserver();
+    public void registerObserver(Observer o);
 
-    public void removeObserver();
+    public void removeObserver(Observer o);
 
     public void notifyObservers();
 }
