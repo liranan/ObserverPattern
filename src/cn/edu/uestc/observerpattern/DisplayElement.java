@@ -9,11 +9,7 @@ package cn.edu.uestc.observerpattern;
  *
  * @author Liranan
  */
-public interface Subject {
+public interface DisplayElement {
 
-    public void registerObserver();
-
-    public void removeObserver();
-
-    public void notifyObservers();
+    public void display();
 }

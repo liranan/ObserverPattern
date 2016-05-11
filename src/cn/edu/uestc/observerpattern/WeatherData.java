@@ -7,13 +7,8 @@ package cn.edu.uestc.observerpattern;
 
 /**
  *
- * @author Liranan
+ * @author Administrator
  */
-public interface Subject {
+public class WeatherData {
 
-    public void registerObserver();
-
-    public void removeObserver();
-
-    public void notifyObservers();
 }
