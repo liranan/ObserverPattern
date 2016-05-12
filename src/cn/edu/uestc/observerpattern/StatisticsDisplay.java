@@ -11,14 +11,12 @@ package cn.edu.uestc.observerpattern;
  */
 public class StatisticsDisplay implements Observer, DisplayElement {
 
-    static float temperatureSum = 0;
-    static float temperatureMax = 0;
-    static float temperatureMin = 100;
+    private float temperatureSum = 0.0f;
+    static float temperatureMax = 0.0f;
+    static float temperatureMin = 200.0f;
     static int notifyNum = 0;
-    private Subject weatherData;
 
     public StatisticsDisplay(Subject weatherData) {
-        this.weatherData = weatherData;
         weatherData.registerObserver(this);
     }
 
