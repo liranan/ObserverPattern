@@ -23,7 +23,6 @@ public class WeatherData implements Subject {
     }
 
     public void registerObserver(Observer o) {
-        System.out.println(o);
         observers.add(o);
     }
 

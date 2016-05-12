@@ -15,8 +15,9 @@ public class WeatherStation {
         WeatherData weatherData = new WeatherData();
 
         CurrentConditionsDisplay currentDisplay = new CurrentConditionsDisplay(weatherData);
+        StatisticsDisplay statisticsDisplay = new StatisticsDisplay(weatherData);
         weatherData.setMeasureMents(80, 65, 30.4f);
         weatherData.setMeasureMents(82, 70, 29.2f);
-        weatherData.setMeasureMents(79, 90, 29.2f);
+        weatherData.setMeasureMents(78, 90, 29.2f);
     }
 }
