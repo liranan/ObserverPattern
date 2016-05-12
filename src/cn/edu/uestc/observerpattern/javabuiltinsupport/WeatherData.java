@@ -3,45 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cn.edu.uestc.observerpattern;
+package cn.edu.uestc.observerpattern.javabuiltinsupport;
 
-import java.util.ArrayList;
+import java.util.Observable;
+import java.util.Observer;
 
 /**
  *
  * @author Liranan
  */
-public class WeatherData implements Subject {
+public class WeatherData extends Observable {
 
-    private ArrayList<Observer> observers;
     private float temperature;
     private float humidity;
     private float pressure;
 
     public WeatherData() {
-        observers = new ArrayList<Observer>();
-    }
-
-    public void registerObserver(Observer o) {
-        observers.add(o);
-    }
-
-    public void removeObserver(Observer o) {
-        int i = observers.indexOf(o);
-        if (i > 0) {
-            observers.remove(i);
-        }
-    }
-
-    public void notifyObservers() {
-        for (int i = 0; i < observers.size(); i++) {
-            Observer observer = (Observer) observers.get(i);
-            observer.update(temperature, humidity, pressure);
-        }
-    }
-
-    public void measurementsChanged() {
-        notifyObservers();
     }
 
     public void setMeasurements(float temperature, float humidity, float pressure) {
@@ -49,6 +26,11 @@ public class WeatherData implements Subject {
         this.humidity = humidity;
         this.pressure = pressure;
         measurementsChanged();
+    }
+
+    public void measurementsChanged() {
+        setChanged();
+        notifyObservers();
     }
 
     public float getTemperature() {

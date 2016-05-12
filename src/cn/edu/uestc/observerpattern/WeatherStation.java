@@ -5,6 +5,12 @@
  */
 package cn.edu.uestc.observerpattern;
 
+import cn.edu.uestc.observerpattern.javabuiltinsupport.WeatherData;
+import cn.edu.uestc.observerpattern.javabuiltinsupport.CurrentConditionsDisplay;
+import cn.edu.uestc.observerpattern.javabuiltinsupport.StatisticsDisplay;
+import cn.edu.uestc.observerpattern.javabuiltinsupport.ForecastDisplay;
+import cn.edu.uestc.observerpattern.javabuiltinsupport.HeatIndexDisplay;
+
 /**
  *
  * @author Liranan
@@ -23,12 +29,12 @@ public class WeatherStation {
         HeatIndexDisplay heatIndexDisplay
                 = new HeatIndexDisplay(weatherData);
 
-        weatherData.setMeasureMents(80, 65, 30.4f);
+        weatherData.setMeasurements(80, 65, 30.4f);
         System.out.println("======================");
 
-        weatherData.setMeasureMents(82, 70, 29.2f);
+        weatherData.setMeasurements(82, 70, 29.2f);
         System.out.println("======================");
 
-        weatherData.setMeasureMents(78, 90, 29.2f);
+        weatherData.setMeasurements(78, 90, 29.2f);
     }
 }
